@@ -16,6 +16,12 @@ const multArr = (arr, i = 0, prod = 1) => {
 }
 console.log(multArr([1,2,3,4]))
 
+console.log('QUESTION 3')
+const concatArr = (arr, i = 0, str = " ") =>{
+    if(i>=arr.length) return str
+    str += arr[i] + " "
+    i++
+    return concatArr(arr,i, str)
+}
 
-
-    
+console.log(concatArr(['is', 'it', 'tomorrow']))
