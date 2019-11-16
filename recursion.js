@@ -25,3 +25,14 @@ const concatArr = (arr, i = 0, str = " ") =>{
 }
 
 console.log(concatArr(['is', 'it', 'tomorrow']))
+
+console.log('QUESTION 4')
+const sumEvens = (arr, i = 0, sum = 0) => {
+    if(i >= arr.length) return sum
+    if(arr[i] % 2 === 0){
+        sum += arr[i]
+    }
+    i++ 
+    return sumEvens(arr, i, sum)
+}
+console.log(sumEvens([2, 3, 5, 6]))
