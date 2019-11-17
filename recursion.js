@@ -37,8 +37,12 @@ const sumEvens = (arr, i = 0, sum = 0) => {
 }
 console.log(sumEvens([2, 3, 5, 6]))
 console.log('QUESTION 5')
-const range = (num1, num2, arr=[num1, num2],i=1) =>{
-    if(!num2) return arr
-    arr.unshift(num1)
-    return range(num1++, num2, arr)
+const range = (num1, num2)=>{
+    let answer = []
+    if(num1 === num2){
+        return answer
+    }
+    answer.push(num1)
+    return answer.concat(range(num1+1, num2))
 }
+console.log(range(2,10))
